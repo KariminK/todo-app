@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+$background: #000000;
+$background2: #ffffff;
+$main-color: #e5e5e5;
+$accent1: #fca311;
+$accent2: #14213d;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: $background;
+}
+header{
+    padding: 5vh 0;
+    text-align: center;
+    h1{
+        color: $background2;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        line-height: 60px;
+        font-size: 72px;
+    }
+    .top-background-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30vh;
+        background: url("/assets/top-background.jpg");
+        background-size: cover;
+        z-index: -1;
+    }
+}
+main{
+    width: 60vw;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+.todo-list{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.todo-item{
+    transition: background-color 200ms;
+    background-color: $background2;
+    border-bottom: 1px solid $background;
+    padding: 10px;
+    padding-right: 20px;
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid $accent2;
+    .todo-complete-btn, #new-todo-btn{
+        border: 2px solid $accent1;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        font-size: 16px;
+        margin: 5px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: background-color 200ms;
+        i{
+            color: #ffffff;
+            opacity: 0;
+        }
+        &:hover{
+            i{
+                opacity: 1;
+            }
+            background-color: $accent1;
+        }
+    }
+    .todo-text{
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        border: none;
+        font-size: 20px;
+        outline: none;
+        background-color: transparent;
+    }
+    .todo-delete-btn{
+        border: none;
+        background-color: transparent;
+        color: $accent2;
+        font-size: 30px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 200ms;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &:last-child{
+        border: none;
+    }
+}
+.new-todo{
+    input{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 22px;
+        outline: none;
+        color: $main-color;
+        background-color: transparent;
+    }
+    overflow: hidden;
+    padding: 5px;
+    height: 70px;
+    background-color: $accent2;
+    border: 2px solid $accent1;
+    border-radius: 33px;
+    margin-bottom: 40px;
+}
+
+.todo-filter{
+    margin-top: 40px;
+    display: flex;
+    border: 2px solid $accent1 !important;
+    border-radius: 33px;
+    justify-content: space-between;
+    background-color: $accent2;
+    color: $main-color;
+    button{
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        margin-inline: 10px;
+        color: $main-color;
+        cursor: pointer;
+        transition: color 200ms;
+        &:hover{
+            color: $accent1;
+        }
+    }
+    span{
+        margin-inline: 10px;
+    }
+}
+
+.completed{
+    background-color: #14213d;
+    .todo-complete-btn{
+        background-color: $accent1;
+        i{
+            opacity: 1;
+        }
+    }
+    .todo-text{
+        text-decoration: line-through;
+        color: $main-color;
+    }
+    .todo-delete-btn{
+        color: $accent1;
+    }
+}
+@media screen and (max-width:768px) {
+    main{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px) {
+    header{
+        h1{
+            font-size: 50px;
+        }
+    }
+    .todo-filter{
+        justify-content: center;
+        span{
+            display: none;
+        }
+        #todo-clear-completed-btn{
+            display: none;
+        }
+    }
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5vh;
+    color: $accent2;
+    text-align: center;
+    z-index: -1;
+    a{
+        color: $accent1;
+        transition: color 200ms;
+        &:hover{
+            color: $main-color;
+        }
+    }
+}
+.active{
+    color: $accent1 !important;
+}
+.hide{
+    display: none;
+}

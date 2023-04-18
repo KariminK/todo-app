@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="top-background-image"></div>
+        <h1>Todo app</h1>
+    </header>
+    <main>
+        <div class="todo-item new-todo">
+            <button id="new-todo-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
+            <input type="text" name="text-input" id="new-todo-input" maxlength="64" placeholder="Make new todo...">
+        </div>
+        <ul class="todo-list">
+            
+        </ul>
+        <div class="todo-item todo-filter">
+            <span id="items-left-span">0 items left</span>
+            <div class="todo-filter-btns">
+                <button class="todo-filter-btn active">All</button>
+                <button class="todo-filter-btn">Completed</button>
+                <button class="todo-filter-btn">Active</button>
+            </div>
+            <button id="todo-clear-completed-btn">Clear Completed</button>
+        </div>
+    </main>
+    <footer>
+        <p>Coded by <a href="https://github.com/karimink">Karimin</a></p>
+    </footer>
+    <script src="https://kit.fontawesome.com/2e000cecf5.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
