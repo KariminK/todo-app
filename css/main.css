@@ -27,7 +27,7 @@ header .top-background-image {
   left: 0;
   right: 0;
   height: 30vh;
-  background: url("assets/top-background.jpg");
+  background: url("../assets/top-background.jpg");
   background-size: cover;
   z-index: -1;
 }
